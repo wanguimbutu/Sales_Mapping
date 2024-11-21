@@ -1,6 +1,6 @@
 ## Sales
 
-Sales mobile application
+Sales Mobile application eith ERPNEXT selling module and a sales tracking module
 
 #### License
 

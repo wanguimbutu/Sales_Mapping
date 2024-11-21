@@ -1,8 +1,8 @@
 app_name = "sales"
 app_title = "Sales"
-app_publisher = "SkyLimit Management Consultancy Kenya"
-app_description = "Sales mobile application"
-app_email = "wanguimbutu@gmail.com"
+app_publisher = "SkyLimit Management Consultancy"
+app_description = "Sales Mobile application eith ERPNEXT selling module and a sales tracking module"
+app_email = "info@skylimit.co.ke"
 app_license = "mit"
 
 # Apps

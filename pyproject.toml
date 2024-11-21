@@ -1,9 +1,9 @@
 [project]
 name = "sales"
 authors = [
-    { name = "SkyLimit Management Consultancy Kenya", email = "wanguimbutu@gmail.com"}
+    { name = "SkyLimit Management Consultancy", email = "info@skylimit.co.ke"}
 ]
-description = "Sales mobile application"
+description = "Sales Mobile application eith ERPNEXT selling module and a sales tracking module"
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]
