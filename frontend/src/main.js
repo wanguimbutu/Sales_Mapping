@@ -1,17 +1,19 @@
-import './index.css'
+import Vue from 'vue';
+import * as VueGoogleMaps from 'vue2-google-maps';
+import App from './App.vue';
+import router from './router';
+import './registerServiceWorker';
 
-import { createApp } from 'vue'
-import router from './router'
-import App from './App.vue'
+Vue.config.productionTip = false;
 
-import { Button, setConfig, frappeRequest, resourcesPlugin } from 'frappe-ui'
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'YOUR_GOOGLE_MAPS_API_KEY', // Replace with your API Key
+    libraries: 'places', // Required if you use the Places API
+  },
+});
 
-let app = createApp(App)
-
-setConfig('resourceFetcher', frappeRequest)
-
-app.use(router)
-app.use(resourcesPlugin)
-
-app.component('Button', Button)
-app.mount('#app')
+new Vue({
+  router,
+  render: (h) => h(App),
+}).$mount('#app');

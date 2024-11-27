@@ -1,39 +1,20 @@
 <template>
-  <div class="max-w-3xl py-12 mx-auto">
-    <Button
-      icon-left="code"
-      @click="$resources.ping.fetch"
-      :loading="$resources.ping.loading"
-    >
-      Click to send 'ping' request
-    </Button>
-    <div>
-      {{ $resources.ping.data }}
-    </div>
-    <pre>{{ $resources.ping }}</pre>
-
-    <Button @click="showDialog = true">Open Dialog</Button>
-    <Dialog title="Title" v-model="showDialog"> Dialog content </Dialog>
+  <div>
+    <h1>Welcome to PWA Location App</h1>
+    <GoogleMap />
+    <LocationChecker />
   </div>
 </template>
 
 <script>
-import { Dialog } from 'frappe-ui'
+import GoogleMap from '../components/GoogleMap.vue';
+import LocationChecker from '../components/LocationChecker.vue';
 
 export default {
-  name: 'Home',
-  data() {
-    return {
-      showDialog: false,
-    }
-  },
-  resources: {
-    ping: {
-      url: 'ping',
-    },
-  },
+  name: "Home",
   components: {
-    Dialog,
+    GoogleMap,
+    LocationChecker,
   },
-}
+};
 </script>

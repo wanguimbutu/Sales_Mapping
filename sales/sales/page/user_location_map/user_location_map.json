@@ -1,0 +1,19 @@
+{
+ "content": null,
+ "creation": "2024-11-27 09:24:40.027106",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2024-11-27 09:24:40.027106",
+ "modified_by": "Administrator",
+ "module": "Sales",
+ "name": "user-location-map",
+ "owner": "Administrator",
+ "page_name": "user-location-map",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "User Location Map"
+}
