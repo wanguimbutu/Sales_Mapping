@@ -1,19 +1,13 @@
-import Vue from 'vue';
-import * as VueGoogleMaps from 'vue2-google-maps';
-import App from './App.vue';
-import router from './router';
-import './registerServiceWorker';
+import { createApp } from "vue";
+import App from "./App.vue";
+import "./registerServiceWorker";
+import router from "./router"; // Assuming a router.js file is set up for routing
 
-Vue.config.productionTip = false;
+// Create the Vue app
+const app = createApp(App);
 
-Vue.use(VueGoogleMaps, {
-  load: {
-    key: 'YOUR_GOOGLE_MAPS_API_KEY', // Replace with your API Key
-    libraries: 'places', // Required if you use the Places API
-  },
-});
+// Use the router for navigation
+app.use(router);
 
-new Vue({
-  router,
-  render: (h) => h(App),
-}).$mount('#app');
+// Mount the app
+app.mount("#app");

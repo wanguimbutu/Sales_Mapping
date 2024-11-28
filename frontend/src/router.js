@@ -1,16 +1,17 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import Home from './views/Home.vue';
-
-Vue.use(VueRouter);
+import { createRouter, createWebHistory } from "vue-router";
+import RealTimeTracking from "./pages/RealTimeTracking.vue";
+import CustomerList from "./pages/CustomerList.vue";
+import SalesOrderList from "./pages/SalesOrderList.vue";
 
 const routes = [
-  { path: '/', name: 'Home', component: Home },
+  { path: "/", redirect: "/tracking" },
+  { path: "/tracking", component: RealTimeTracking },
+  { path: "/customers", component: CustomerList },
+  { path: "/sales-orders", component: SalesOrderList },
 ];
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+const router = createRouter({
+  history: createWebHistory(),
   routes,
 });
 

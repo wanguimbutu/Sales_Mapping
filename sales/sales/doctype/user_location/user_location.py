@@ -1,9 +1,6 @@
-# Copyright (c) 2024, SkyLimit Management Consultancy and contributors
-# For license information, please see license.txt
+import frappe
 
-# import frappe
-from frappe.model.document import Document
-
-
-class UserLocation(Document):
-	pass
+@frappe.whitelist()
+def get_real_time_locations():
+    users = frappe.get_all("User Location", fields=["name", "lat", "lon", "battery"])
+    return {"users": users, "locations": users}

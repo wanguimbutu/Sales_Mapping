@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import GoogleMap from '../components/GoogleMap.vue';
+import GoogleMap from '../components/GoogleMapView.vue';
 import LocationChecker from '../components/LocationChecker.vue';
 
 export default {
